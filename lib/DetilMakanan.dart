@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class DetilMakanan extends StatelessWidget {
   DetilMakanan({Key key, this.makanan, this.gambar, this.deskripsi}): super(key: key);
+
   final String makanan, gambar, deskripsi;
 
   @override
@@ -19,10 +20,10 @@ class DetilMakanan extends StatelessWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                Image.asset(gambar, width: 1000, height: 300, fit: BoxFit.cover,),
+                Image.asset(gambar, width: 1000, height: 400, fit: BoxFit.cover,),
                 Padding(
                   padding: EdgeInsets.all(10.0),
-                  child: Text(makanan, style: Theme.of(context).textTheme.headline),
+                  child: Text(makanan, style: TextStyle(fontSize: 30.0)),
                 ),
                 Text(deskripsi),
               ],

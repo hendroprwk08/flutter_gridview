@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nama Makanan',
       home: HomeScreen(),
+        debugShowCheckedModeBanner: false
     );
   }
 }
@@ -42,15 +43,15 @@ class HomeScreen extends StatelessWidget {
     genMakanan();
 
     return Scaffold(
-        appBar: new AppBar(
-        title:  new Text("Nama Makanan"),
+        appBar: AppBar(
+        title: Text("Nama Makanan"),
     ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: new GridView.count(
+        child: GridView.count(
           crossAxisCount: 2,
           children: List.generate(mkn.length, (index){
-            return new GestureDetector(
+            return GestureDetector(
 
               onTap: (){
                 Navigator.push(context,
@@ -66,19 +67,21 @@ class HomeScreen extends StatelessWidget {
                 },
 
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                  child: new Container(
-                    decoration: new BoxDecoration(
+                padding: const EdgeInsets.all(2.0),
+                  child: Container(
+                    decoration: BoxDecoration(
                       color: Colors.grey[100],
                     ),
-                    child: new Column(
+                    child: Column(
                       children: <Widget>[
                         //isi container
-                        new Image.asset(mkn[index].gambar.trim(), width: 160.0, height: 120.0, fit: BoxFit.cover,),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: new Text(mkn[index].nama.trim()),
+                            padding: const EdgeInsets.all(8.0),
+                            child: Image.asset(mkn[index].gambar.trim(), width: 180.0, height: 160.0, fit: BoxFit.cover,)
                         ),
+
+                        Text(mkn[index].nama.trim()),
+
                       ],
                     ),
                   ),
