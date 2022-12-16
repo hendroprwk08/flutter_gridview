@@ -75,9 +75,11 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         //isi container
-                        Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Image.asset(mkn[index].gambar.trim(), width: 180.0, height: 160.0, fit: BoxFit.cover,)
+                        Expanded(  //expanded agar tak bottom overflow
+                          child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Image.asset(mkn[index].gambar.trim(), width: 180.0, height: 160.0, fit: BoxFit.cover,)
+                          ),
                         ),
 
                         Text(mkn[index].nama.trim()),
