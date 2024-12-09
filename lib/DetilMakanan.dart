@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DetilMakanan extends StatelessWidget {
-  DetilMakanan({Key key, this.makanan, this.gambar, this.deskripsi}): super(key: key);
-
+  DetilMakanan({super.key, required this.makanan, required this.gambar, required this.deskripsi});
   final String makanan, gambar, deskripsi;
 
   @override

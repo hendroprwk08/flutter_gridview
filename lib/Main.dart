@@ -17,10 +17,9 @@ class MyApp extends StatelessWidget {
 }
 
 class HomeScreen extends StatelessWidget {
-  List<Makanan> mkn;
+  late List<Makanan> mkn;
 
   void genMakanan(){
-    mkn = new List();
     mkn.add(new Makanan(gambar: "images/bakcang.jpg", nama: "Bakcang", deskripsi: "Deskripsi Bacang"));
     mkn.add(new Makanan(gambar: "images/bakpia.jpg", nama: "Bakpia", deskripsi: "Deskripsi Bakpia"));
     mkn.add(new Makanan(gambar: "images/batagor.jpg", nama: "Batagor", deskripsi: "Deskripsi Batagor"));
